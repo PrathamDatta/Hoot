@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Loader</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1e1e2f;
+            overflow: hidden;
+        }
+
+        .loader-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+
+        .head {
+            width: 120px;
+            height: 120px;
+            background: #ff6f61;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: inset 0 -10px 0 #ff8a80;
+        }
+
+        .brain {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: url('images/brain_image.png') no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        .idea-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .idea {
+            width: 10px;
+            height: 10px;
+            background-color: #ffd700;
+            border-radius: 50%;
+            position: absolute;
+            animation: float 1.5s infinite ease-in-out;
+            opacity: 0;
+        }
+
+        .idea:nth-child(1) { animation-delay: 0s; left: 50%; top: 10%; }
+        .idea:nth-child(2) { animation-delay: 0.3s; left: 90%; top: 50%; }
+        .idea:nth-child(3) { animation-delay: 0.6s; left: 50%; top: 90%; }
+        .idea:nth-child(4) { animation-delay: 0.9s; left: 10%; top: 50%; }
+        .idea:nth-child(5) { animation-delay: 1.2s; left: 20%; top: 20%; }
+        .idea:nth-child(6) { animation-delay: 1.5s; left: 80%; top: 20%; }
+        .idea:nth-child(7) { animation-delay: 1.8s; left: 20%; top: 80%; }
+        .idea:nth-child(8) { animation-delay: 2.1s; left: 80%; top: 80%; }
+
+        @keyframes float {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            30% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(-50px + 100px * var(--dirX)), calc(-50px + 100px * var(--dirY))) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Randomize direction */
+        .idea:nth-child(1) { --dirX: -1; --dirY: -1; }
+        .idea:nth-child(2) { --dirX: 1; --dirY: -1; }
+        .idea:nth-child(3) { --dirX: 1; --dirY: 1; }
+        .idea:nth-child(4) { --dirX: -1; --dirY: 1; }
+        .idea:nth-child(5) { --dirX: -0.5; --dirY: -0.8; }
+        .idea:nth-child(6) { --dirX: 0.8; --dirY: -0.5; }
+        .idea:nth-child(7) { --dirX: 0.5; --dirY: 0.8; }
+        .idea:nth-child(8) { --dirX: -0.8; --dirY: 0.5; }
+    </style>
+</head>
+<body>
+    <div class="loader-container">
+        <div class="head">
+            <div class="brain"></div>
+        </div>
+        <div class="idea-container">
+            <div class="idea"></div>
+            <div class="idea"></div>
+            <div class="idea"></div>
+            <div class="idea"></div>
+            <div class="idea"></div>
+            <div class="idea"></div>
+            <div class="idea"></div>
+            <div class="idea"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+  <div class="container">
+    <div class="title">Student Registration</div>
+    <div class="content">
+      <form id="registrationForm">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" name="full_name" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" name="username" placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" name="phone" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" name="password" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" name="confirm_password" placeholder="Confirm your password" required>
+          </div>
+        </div>
+
+        <div class="gender-details">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
+          </div>
+          <button type="button" id="confirmGender">Confirm Gender</button>
+          <p id="selectedGender" style="font-weight: bold; color: blue;"></p>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    let selectedGender = "";
+    
+    document.getElementById("confirmGender").addEventListener("click", function() {
+        let gender = document.querySelector('input[name="gender"]:checked');
+        if (gender) {
+            selectedGender = gender.value;
+            document.getElementById("selectedGender").innerText = "Selected Gender: " + selectedGender;
+        } else {
+            alert("Please select a gender before confirming.");
+        }
+    });
+
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        if (!selectedGender) {
+            alert("Please confirm your gender before submitting.");
+            return;
+        }
+
+        let formData = new FormData(this);
+        formData.append("gender", selectedGender);
+
+        fetch("api/register.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert("Registration successful!");
+                window.location.href = "login.html";
+            } else {
+                alert(data.message);
+            }
+        });
+    });
+  </script>
+</body>
+</html>

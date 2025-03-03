@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoot&Howl Learning</title>  
+        <link rel="stylesheet" href="assets/css/responsive.css">
+   		<!--slick.css-->
+       <link rel="stylesheet" href="assets/css/slick.css">
+       <link rel="stylesheet" href="assets/css/slick-theme.css">
+
+           
+           <!--style.css-->
+           <link rel="stylesheet" href="assets/css/style.css">
+<style>#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2980f8;
+  z-index: 1000;
+}
+
+.loader-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.head {
+  width: 120px;
+  height: 120px;
+  background: #e7f3fc;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 -10px 0 #537eff;
+
+.brain {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url('logo.jpg') no-repeat center center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.idea-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.idea {
+  width: 10px;
+  height: 10px;
+  background-color: #ffd700;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: shoot-out 1s linear infinite;
+  opacity: 0;
+}
+.reviews{padding:117px 0 75px;}
+.reviews-content {margin-top:36px;}
+
+/*-------------------------------------
+        6. Works 
+--------------------------------------*/
+.works{padding: 0 0 90px;}
+.works-content {margin-top: 73px;}
+
+.single-how-works{
+    text-align: center;
+    padding:50px 42px;
+    border-radius: 50px;
+    box-shadow: 0 0px 5px rgba(71,71,71,.2);
+    margin-bottom: 50px;
+    -webkit-transition: .3s linear; 
+    -moz-transition:.3s linear; 
+    -ms-transition:.3s linear; 
+    -o-transition:.3s linear;
+    transition: .3s linear;
+}
+
+.single-how-works-icon {
+    display: inline-block;
+    color: #50616c;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background: #eef2f6;
+    border-radius: 50px;
+}
+.single-how-works h2 a {
+    font-size:  18px;
+    margin: 35px 0 20px;
+}
+.single-how-works h2 a span {text-transform:  lowercase;}
+.single-how-works p {margin-bottom: 25px;text-transform: initial;}
+
+.single-how-works-icon [class^="flaticon-"]:before,.single-how-works-icon [class*=" flaticon-"]:before,.single-how-works-icon [class^="flaticon-"]:after,.single-how-works-icon [class*=" flaticon-"]:after {font-size: 35px;}
+.single-how-works:hover .single-how-works-icon [class^="flaticon-"]:before,.single-how-works:hover .single-how-works-icon [class*=" flaticon-"]:before,.single-how-works:hover .single-how-works-icon [class^="flaticon-"]:after,.single-how-works:hover .single-how-works-icon [class*=" flaticon-"]:after {color:#ff545a;}
+
+.welcome-hero-btn.how-work-btn {
+    display: inline-block;
+    margin: 0;
+    width: 100px;
+    height: 35px;
+    font-size: 12px;
+    background: transparent;
+    color: #767f86;
+    border: 1px solid #d3d6d9;
+    border-radius: 50px;
+}
+
+.single-how-works:hover h2 a,.single-how-works:hover p{color: #fff;}
+.single-how-works:hover .single-how-works-icon{background: #fff;}
+.single-how-works:hover .welcome-hero-btn.how-work-btn{background: #fff;color: #ff545a;}
+.single-how-works:hover{box-shadow: 0 0px 10px rgba(71,71,71,.4);background: #ff545a;}
+
+/*single-testimonial-box */
+.single-testimonial-box  {
+    padding: 50px 30px;
+    box-shadow: 0 0px 5px rgba(71,71,71,.2); 
+    overflow-x:hidden;
+    -webkit-transition: .3s; 
+    -moz-transition:.3s; 
+    -ms-transition:.3s; 
+    -o-transition:.3s;
+    transition: .3s;
+}
+.single-testimonial-box:hover{box-shadow:0 10px 20px rgba(21,19,19,.2);}
+.slick-current .single-testimonial-box{box-shadow:0 10px 20px rgba(21,19,19,.2);}
+/*testimonial-description*/
+.single-testimonial-box{
+    width: 404px;
+    background:#fff;
+}
+/* testimonial-info */
+.testimonial-info {
+    display: flex;
+    align-items: center;
+    text-transform:capitalize;
+}
+.testimonial-img {
+    position: relative;
+    top: 11px;
+    box-shadow: 0 0px 5px rgba(71,71,71,.2);
+    margin-right: 5px;
+    border-radius:50px;
+    -webkit-transition: .3s; 
+    -moz-transition:.3s; 
+    -ms-transition:.3s; 
+    -o-transition:.3s;
+    transition: .3s;
+}
+.testimonial-person {
+    margin-left: 15px;
+    margin-top: 11px;
+}
+.testimonial-person h2 {
+    color: #505866;
+    font-size: 18px;
+}
+.testimonial-person h4 {
+    color: #a2a5ab;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.testimonial-person-star i {
+    color: #ffda2b;
+    margin: 9px 4px 0 0;
+}/* testimonial-info */
+
+
+/* testimonial-comment */
+.testimonial-comment {
+    margin-top: 18px;
+}
+.testimonial-comment p{
+    color: #8d939e;
+    font-size: 14px;
+    font-weight: 300;
+}/* testimonial-comment */
+
+
+/*.slick-slide*/
+.slick-initialized .slick-slide {
+    display: block;
+    padding: 40px 0;
+}
+.slick-slide.slick-cloned {outline: 0!important;}
+.slick-slide {
+  margin: 0px 10px;
+}
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .5;
+}
+.slick-active {
+  opacity: .5;
+}
+.slick-current {
+  opacity: 1;
+}
+/*.slick-slide*/
+.reviews, .works, .single-testimonial-box {
+    padding-top: 50px; /* Adjust the value as needed */
+    padding-bottom: 50px; /* Adjust the value as needed */
+}
+
+/* Assigning Angles Dynamically */
+.idea:nth-child(1) { --angle: 0deg; animation-delay: 0s; }
+.idea:nth-child(2) { --angle: 45deg; animation-delay: 0.1s; }
+.idea:nth-child(3) { --angle: 90deg; animation-delay: 0.2s; }
+.idea:nth-child(4) { --angle: 135deg; animation-delay: 0.3s; }
+.idea:nth-child(5) { --angle: 180deg; animation-delay: 0.4s; }
+.idea:nth-child(6) { --angle: 225deg; animation-delay: 0.5s; }
+.idea:nth-child(7) { --angle: 270deg; animation-delay: 0.6s; }
+.idea:nth-child(8) { --angle: 315deg; animation-delay: 0.7s; }
+
+@keyframes shoot-out {
+  0% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translate(0) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translate(300px) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Main Content Styles */
+#main-content {
+  display: none;
+}</style>
+
+<script>
+  // Display loader for 3 seconds before showing the main content
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }, 3000);
+  });
+</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.jpg">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+  <div id="loader">
+    <div class="loader-container">
+      <div class="head">
+        <div class="brain"></div>
+      </div>
+      <div class="idea-container">
+        <div class="idea"></div>
+        <div class="idea"></div>
+        <div class="idea"></div>
+        <div class="idea"></div>
+        <div class="idea"></div>
+        <div class="idea"></div>
+        <div class="idea"></div>
+        <div class="idea"></div>
+      </div>
+    </div>
+  </div>
+  <div class="main-content">
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-2 py-2">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <img src="logo.jpg" alt="Hoot&Howl Logo" class="h-10 w-10 rounded-lg">
+          <span class="font-bold text-xl text-[#000f49] whitespace-nowrap">Hoot&Howl Learning</span>
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-gray-600 hover:text-[#000f49] focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path class="hamburger" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path class="close hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="login.html" class="bg-[#000f49] text-white px-6 py-2 rounded-lg hover:bg-[#1a237e] transition-colors duration-200 border-2 border-transparent">Login</a>
+          <a href="#about" class="text-gray-600 hover:text-[#000f49] transition-colors whitespace-nowrap">About</a>
+          <a href="#services" class="text-gray-600 hover:text-[#000f49] transition-colors whitespace-nowrap">Services</a>
+          <a href="#works" class="text-gray-600 hover:text-[#000f49] transition-colors whitespace-nowrap">Featured Profiles</a>
+          <a href="#reviews" class="text-gray-600 hover:text-[#000f49] transition-colors whitespace-nowrap">Reviews</a>
+          <a href="#faq" class="text-gray-600 hover:text-[#000f49] transition-colors whitespace-nowrap">FAQ</a>
+          <a href="#contact" class="text-gray-600 hover:text-[#000f49] transition-colors whitespace-nowrap">Contact</a>
+          <a href="#join" class="bg-[#000f49] text-white px-6 py-2 rounded-lg hover:bg-[#1a237e] transition-colors whitespace-nowrap">Join as Tutor</a>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden">
+          <div class="bg-white w-64 min-h-screen ml-auto py-4 px-6">
+            <div class="flex flex-col space-y-4">
+              <a href="#about" class="text-gray-600 hover:text-[#000f49]">About</a>
+              <a href="#services" class="text-gray-600 hover:text-[#000f49]">Services</a>
+              <a href="#featured-profiles" class="text-gray-600 hover:text-[#000f49]">Featured Profiles</a>
+              <a href="#reviews" class="text-gray-600 hover:text-[#000f49]">Reviews</a>
+              <a href="#faq" class="text-gray-600 hover:text-[#000f49]">FAQ</a>
+              <a href="#contact" class="text-gray-600 hover:text-[#000f49]">Contact</a>
+              <a href="#join" class="bg-[#000f49] text-white px-6 py-2 rounded-lg hover:bg-[#1a237e] transition-colors duration-200 border-2 border-transparent">Join as Tutor</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!-- Demo Class Section -->
+<section class="py-40 bg-blue-100">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-10 space-y-8 md:space-y-0">
+    <!-- Left Content -->
+    <div class="md:w-1.5/3">
+      <h2 class="text-3xl font-bold text-gray-900 leading-tight mb-4">
+        Join Live Online or Offline Classes with the Best Tutors
+      </h2>
+      <div class="flex items-center bg-white shadow-lg rounded-lg p-2">
+        <input
+          type="text"
+          placeholder="What do you want to learn?"
+          class="flex-grow border-none focus:outline-none px-2 py-1 text-gray-700"
+        />
+        <a
+          href="https://forms.gle/Et2AqBieqqgwLRox5"
+          target="_blank"
+          class="bg-blue-500 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-600 transition"
+        >
+          Book a Demo Class →
+        </a>
+      </div>
+      <div class="flex mt-4 space-x-4 text-gray-600">
+        <span class="font-bold text-lg">1 Hundred+</span>
+        <span>Verified Tutors</span>
+        <span>|</span>
+        <span class="font-bold text-lg">550+</span>
+        <span>Students</span>
+        <span>|</span>
+        <span class="font-bold text-lg">4 Hundred+</span>
+        <span>Reviews</span>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="md:w-1/3">
+      <img
+        src="images\preteen-boy-uses-laptop-make-video-call-with-his-teacher-his-mother (1).jpg"
+        alt="Online Learning"
+        class="w-full rounded-lg shadow-lg"
+      />
+    </div>
+  </div>
+</section>
+
+  <!-- Why Choose Hoot&Howl Section -->
+  <section id="about" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-[#000f49]">Why Choose Hoot&Howl?</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Expert tutors, customized learning plans, and a commitment to excellence make Hoot&Howl your trusted educational partner.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Qualified Tutors</h3>
+          <p class="text-gray-600">All tutors are vetted for their expertise and passion for teaching.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Flexible Learning</h3>
+          <p class="text-gray-600">Sessions are designed around your schedule, both online and in-person.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Proven Results</h3>
+          <p class="text-gray-600">Our students consistently achieve top grades and improved confidence.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Personalized Learning Plans</h3>
+          <p class="text-gray-600">Each student gets a customized study plan tailored to their strengths, weaknesses, and learning pace.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Interactive and Engaging Sessions</h3>
+          <p class="text-gray-600">We use modern teaching techniques, including gamified learning, real-world applications, and hands-on exercises.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Affordable and Accessible Education</h3>
+          <p class="text-gray-600">We believe quality education should be accessible to all, offering budget-friendly pricing and financial aid options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+     <!-- Services Section -->
+  <section id="services" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-[#000f49]">Our Services</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Explore the range of personalized services we offer to cater to every learning need.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-100 rounded-xl shadow-lg">
+          <img src="images\men-teach-women-how-work-with-laptops-work.jpg" alt="One-on-One Tutoring" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2">One-on-One Tutoring</h3>
+          <p class="text-gray-600">Individualized attention and customized learning plans for every student.</p>
+        </div>
+        <div class="p-6 bg-gray-100 rounded-xl shadow-lg">
+          <img src="images\side-view-young-people-church-praying.jpg" alt="Group Classes" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2">Group Classes</h3>
+          <p class="text-gray-600">Collaborative learning experiences for students in small groups.</p>
+        </div>
+        <div class="p-6 bg-gray-100 rounded-xl shadow-lg">
+          <img src="images\tutor-girl-home.jpg" alt="Exam Preparation" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2">Exam Preparation</h3>
+          <p class="text-gray-600">Targeted coaching to help students excel in board and competitive exams.</p>
+        </div>
+        <div class="p-6 bg-gray-100 rounded-xl shadow-lg">
+          <img src="images\skills-intelligence-job-occupation-recruitment-concept.jpg" alt="Skill Development" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2">Skill Development</h3>
+          <p class="text-gray-600">Workshops and courses to enhance soft skills, coding, and other proficiencies.</p>
+        </div>
+        <div class="p-6 bg-gray-100 rounded-xl shadow-lg">
+          <img src="images\medium-shot-smiley-friends-with-books.jpg" alt="Language Learning" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2">Language Learning</h3>
+          <p class="text-gray-600">Specialized programs for mastering new languages effectively.</p>
+        </div>
+        <div class="p-6 bg-gray-100 rounded-xl shadow-lg">
+          <img src="images\close-up-student-online-class.jpg" alt="Online Classes" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2">Online Classes</h3>
+          <p class="text-gray-600">Convenient and interactive virtual sessions with expert tutors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Featured Profiles Section -->
+    <section id="works" class="works">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-[#000f49]">Featured Profiles</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="p-6 bg-white rounded-xl shadow-lg">
+            <img src="images\SP.jpg" alt="Surya Prakash" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-bold text-gray-900">Surya Prakash.</h3>
+            <p class="text-sm text-gray-600">Class 12 Tuition</p>
+            <p class="text-sm text-yellow-500"><i class="fas fa-star"></i> 4.5 | 854 reviews</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow-lg">
+            <img src="images\user2.jpg" alt="Rajesh S." class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-bold text-gray-900">Rajesh S.</h3>
+            <p class="text-sm text-gray-600">Class 12 Tuition</p>
+            <p class="text-sm text-yellow-500"><i class="fas fa-star"></i> 4.7 | 124 reviews</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow-lg">
+            <img src="images/profile3.jpg" alt="Jayashree V." class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-bold text-gray-900">Jayashree V.</h3>
+            <p class="text-sm text-gray-600">Korean Language Classes</p>
+            <p class="text-sm text-yellow-500"><i class="fas fa-star"></i> 4.8 | 23 reviews</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow-lg">
+            <img src="images/profile4.jpg" alt="Sagar Chawla" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-bold text-gray-900">Sagar Chawla</h3>
+            <p class="text-sm text-gray-600">Class 11 Tuition</p>
+            <p class="text-sm text-yellow-500"><i class="fas fa-star"></i> 4.6 | 55 reviews</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow-lg">
+            <img src="images/profile5.jpg" alt="Mohini Sinha" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-bold text-gray-900">Mohini Sinha</h3>
+            <p class="text-sm text-gray-600">Fine Arts Classes</p>
+            <p class="text-sm text-yellow-500"><i class="fas fa-star"></i> 4.7 | 15 reviews</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow-lg">
+            <img src="images/profile6.jpg" alt="Raktim Dey" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-bold text-gray-900">Raktim Dey</h3>
+            <p class="text-sm text-gray-600">Vocal Music Classes</p>
+            <p class="text-sm text-yellow-500"><i class="fas fa-star"></i> 4.9 | 59 reviews</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow-lg">
+            <img src="images/profile6.jpg" alt="Raktim Dey" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-bold text-gray-900">Raktim Dey</h3>
+            <p class="text-sm text-gray-600">Vocal Music Classes</p>
+            <p class="text-sm text-yellow-500"><i class="fas fa-star"></i> 4.9 | 59 reviews</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow-lg">
+            <img src="images/profile6.jpg" alt="Raktim Dey" class="w-full h-40 object-cover rounded-lg mb-4">
+            <h3 class="text-lg font-bold text-gray-900">Raktim Dey</h3>
+            <p class="text-sm text-gray-600">Vocal Music Classes</p>
+            <p class="text-sm text-yellow-500"><i class="fas fa-star"></i> 4.9 | 59 reviews</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!--reviews start -->
+<section id="reviews" class="reviews">
+  <div class="section-header">
+    <h2>clients reviews</h2>
+    <p>What our client say about us</p>
+  </div><!--/.section-header-->
+  <div class="reviews-content">
+    <div class="testimonial-carousel">
+        <div class="single-testimonial-box">
+        <div class="testimonial-description">
+          <div class="testimonial-info">
+            <div class="testimonial-img">
+              <img src="assets/images/clients/c1.png" alt="clients">
+            </div><!--/.testimonial-img-->
+            <div class="testimonial-person">
+              <h2>Tom Leakar</h2>
+              <h4>london, UK</h4>
+              <div class="testimonial-person-star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div><!--/.testimonial-person-->
+          </div><!--/.testimonial-info-->
+          <div class="testimonial-comment">
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+            </p>
+          </div><!--/.testimonial-comment-->
+        </div><!--/.testimonial-description-->
+      </div><!--/.single-testimonial-box-->
+        <div class="single-testimonial-box">
+        <div class="testimonial-description">
+          <div class="testimonial-info">
+            <div class="testimonial-img">
+              <img src="assets/images/clients/c2.png" alt="clients">
+            </div><!--/.testimonial-img-->
+            <div class="testimonial-person">
+              <h2>monirul islam</h2>
+              <h4>london, UK</h4>
+              <div class="testimonial-person-star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div><!--/.testimonial-person-->
+          </div><!--/.testimonial-info-->
+          <div class="testimonial-comment">
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+            </p>
+          </div><!--/.testimonial-comment-->
+        </div><!--/.testimonial-description-->
+      </div><!--/.single-testimonial-box-->
+        <div class="single-testimonial-box">
+        <div class="testimonial-description">
+          <div class="testimonial-info">
+            <div class="testimonial-img">
+              <img src="assets/images/clients/c3.png" alt="clients">
+            </div><!--/.testimonial-img-->
+            <div class="testimonial-person">
+              <h2>Shohrab Hossain</h2>
+              <h4>london, UK</h4>
+              <div class="testimonial-person-star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div><!--/.testimonial-person-->
+          </div><!--/.testimonial-info-->
+          <div class="testimonial-comment">
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+            </p>
+          </div><!--/.testimonial-comment-->
+        </div><!--/.testimonial-description-->
+      </div><!--/.single-testimonial-box-->
+        <div class="single-testimonial-box">
+        <div class="testimonial-description">
+          <div class="testimonial-info">
+            <div class="testimonial-img">
+              <img src="assets/images/clients/c4.png" alt="clients">
+            </div><!--/.testimonial-img-->
+            <div class="testimonial-person">
+              <h2>Tom Leakar</h2>
+              <h4>london, UK</h4>
+              <div class="testimonial-person-star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div><!--/.testimonial-person-->
+          </div><!--/.testimonial-info-->
+          <div class="testimonial-comment">
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+            </p>
+          </div><!--/.testimonial-comment-->
+        </div><!--/.testimonial-description-->
+      </div><!--/.single-testimonial-box-->
+        <div class="single-testimonial-box">
+        <div class="testimonial-description">
+          <div class="testimonial-info">
+            <div class="testimonial-img">
+              <img src="assets/images/clients/c1.png" alt="clients">
+            </div><!--/.testimonial-img-->
+            <div class="testimonial-person">
+              <h2>Tom Leakar</h2>
+              <h4>london, UK</h4>
+              <div class="testimonial-person-star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div><!--/.testimonial-person-->
+          </div><!--/.testimonial-info-->
+          <div class="testimonial-comment">
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+            </p>
+          </div><!--/.testimonial-comment-->
+        </div><!--/.testimonial-description-->
+      </div><!--/.single-testimonial-box-->
+        <div class="single-testimonial-box">
+        <div class="testimonial-description">
+          <div class="testimonial-info">
+            <div class="testimonial-img">
+              <img src="assets/images/clients/c2.png" alt="clients">
+            </div><!--/.testimonial-img-->
+            <div class="testimonial-person">
+              <h2>monirul islam</h2>
+              <h4>london, UK</h4>
+              <div class="testimonial-person-star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div><!--/.testimonial-person-->
+          </div><!--/.testimonial-info-->
+          <div class="testimonial-comment">
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+            </p>
+          </div><!--/.testimonial-comment-->
+        </div><!--/.testimonial-description-->
+      </div><!--/.single-testimonial-box-->
+        <div class="single-testimonial-box">
+        <div class="testimonial-description">
+          <div class="testimonial-info">
+            <div class="testimonial-img">
+              <img src="assets/images/clients/c3.png" alt="clients">
+            </div><!--/.testimonial-img-->
+            <div class="testimonial-person">
+              <h2>Shohrab Hossain</h2>
+              <h4>london, UK</h4>
+              <div class="testimonial-person-star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div><!--/.testimonial-person-->
+          </div><!--/.testimonial-info-->
+          <div class="testimonial-comment">
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+            </p>
+          </div><!--/.testimonial-comment-->
+        </div><!--/.testimonial-description-->
+      </div><!--/.single-testimonial-box-->
+        <div class="single-testimonial-box">
+        <div class="testimonial-description">
+          <div class="testimonial-info">
+            <div class="testimonial-img">
+              <img src="assets/images/clients/c4.png" alt="clients">
+            </div><!--/.testimonial-img-->
+            <div class="testimonial-person">
+              <h2>Tom Leakar</h2>
+              <h4>london, UK</h4>
+              <div class="testimonial-person-star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div><!--/.testimonial-person-->
+          </div><!--/.testimonial-info-->
+          <div class="testimonial-comment">
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
+            </p>
+          </div><!--/.testimonial-comment-->
+        </div><!--/.testimonial-description-->
+      </div><!--/.single-testimonial-box-->
+    </div>
+  </div>
+
+</section><!--/.reviews-->
+<!--reviews end -->
+        <section id="faq" class="py-20 bg-blue-100">
+          <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl font-bold text-[#000f49]">Frequently Asked Questions</h2>
+            </div>
+            <div id="accordion" class="space-y-4">
+              <!-- FAQ Item 1 -->
+              <div class="bg-white rounded-lg shadow-md">
+                <button
+                  class="w-full text-left px-6 py-4 text-lg font-semibold text-gray-800 flex justify-between items-center"
+                  onclick="toggleAnswer(1)"
+                >
+                  <span>➤ How many private tutors are available in Bangalore to teach?</span>
+                  <i id="icon-1" class="fas fa-chevron-down"></i>
+                </button>
+                <div id="answer-1" class="px-6 py-2 hidden">
+                  <p class="text-gray-600">
+                    There are thousands of private tutors in Bangalore offering a variety of subjects and expertise.
+                  </p>
+                </div>
+              </div>
+        
+              <!-- FAQ Item 2 -->
+              <div class="bg-white rounded-lg shadow-md">
+                <button
+                  class="w-full text-left px-6 py-4 text-lg font-semibold text-gray-800 flex justify-between items-center"
+                  onclick="toggleAnswer(2)"
+                >
+                  <span>➤ What is the tuition fee charged by home or online tutors in Bangalore?</span>
+                  <i id="icon-2" class="fas fa-chevron-down"></i>
+                </button>
+                <div id="answer-2" class="px-6 py-2 hidden">
+                  <p class="text-gray-600">
+                    Tuition fees depend on the subject, tutor's expertise, and the duration of sessions. On average, fees range from INR 300 to INR 1500 per hour.
+                  </p>
+                </div>
+              </div>
+        
+              <!-- FAQ Item 3 -->
+              <div class="bg-white rounded-lg shadow-md">
+                <button
+                  class="w-full text-left px-6 py-4 text-lg font-semibold text-gray-800 flex justify-between items-center"
+                  onclick="toggleAnswer(3)"
+                >
+                  <span>➤ What's the normal duration of tuition classes hosted by tutors in Bangalore?</span>
+                  <i id="icon-3" class="fas fa-chevron-down"></i>
+                </button>
+                <div id="answer-3" class="px-6 py-2 hidden">
+                  <p class="text-gray-600">
+                    Usually, tuition sessions last for 1 to 2 hours. However, it can vary based on student requirements and tutor availability.
+                  </p>
+                </div>
+              </div>
+        
+              <!-- FAQ Item 4 -->
+              <div class="bg-white rounded-lg shadow-md">
+                <button
+                  class="w-full text-left px-6 py-4 text-lg font-semibold text-gray-800 flex justify-between items-center"
+                  onclick="toggleAnswer(4)"
+                >
+                  <span>➤ How can students improve their knowledge?</span>
+                  <i id="icon-4" class="fas fa-chevron-down"></i>
+                </button>
+                <div id="answer-4" class="px-6 py-2 hidden">
+                  <p class="text-gray-600">
+                    Students can improve their knowledge by consistent practice, seeking help from qualified tutors, and using additional resources such as online courses.
+                  </p>
+                </div>
+              </div>
+        
+              <!-- FAQ Item 5 -->
+              <div class="bg-white rounded-lg shadow-md">
+                <button
+                  class="w-full text-left px-6 py-4 text-lg font-semibold text-gray-800 flex justify-between items-center"
+                  onclick="toggleAnswer(5)"
+                >
+                  <span>➤ Do home or online tutors in Bangalore provide training for competitive examinations?</span>
+                  <i id="icon-5" class="fas fa-chevron-down"></i>
+                </button>
+                <div id="answer-5" class="px-6 py-2 hidden">
+                  <p class="text-gray-600">
+                    Yes, many tutors specialize in preparing students for competitive exams such as JEE, NEET, and more.
+                  </p>
+                </div>
+              </div>
+        
+              <!-- FAQ Item 6 -->
+              <div class="bg-white rounded-lg shadow-md">
+                <button
+                  class="w-full text-left px-6 py-4 text-lg font-semibold text-gray-800 flex justify-between items-center"
+                  onclick="toggleAnswer(6)"
+                >
+                  <span>➤ How can tutors help students improve their scores and skills?</span>
+                  <i id="icon-6" class="fas fa-chevron-down"></i>
+                </button>
+                <div id="answer-6" class="px-6 py-2 hidden">
+                  <p class="text-gray-600">
+                    Tutors provide personalized attention, identify weak areas, and develop strategies to enhance both scores and skills effectively.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <script>
+            function toggleAnswer(id) {
+              const answers = document.querySelectorAll("[id^='answer-']");
+              const icons = document.querySelectorAll("[id^='icon-']");
+        
+              answers.forEach((answer, index) => {
+                const icon = icons[index];
+                if (index + 1 === id) {
+                  if (answer.classList.contains("hidden")) {
+                    answer.classList.remove("hidden");
+                    icon.classList.replace("fa-chevron-down", "fa-chevron-up");
+                  } else {
+                    answer.classList.add("hidden");
+                    icon.classList.replace("fa-chevron-up", "fa-chevron-down");
+                  }
+                } else {
+                  answer.classList.add("hidden");
+                  icon.classList.replace("fa-chevron-up", "fa-chevron-down");
+                }
+              });
+            }
+          </script>
+        </section>        
+        
+        <footer <section id="contact" class="bg-gray-100 py-20"></section>
+          <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-between items-start">
+              <!-- Logo and Description -->
+              <div class="w-full md:w-1/3 mb-6">
+                <center><img src="logo.jpg" alt="Hoot&Howl Logo" class="h-16"></center>
+                <center <p class="mt-4 text-gray-700">Enabling success through personalized education and expert guidance.</p>
+              </div></center>
+        
+              <!-- Contact Information -->
+              <div class="w-full md:w-1/3 mb-6">
+                <h3 class="text-lg font-semibold text-gray-900">Contact Us</h3>
+                <div class="mt-4 text-gray-700">
+                  <p><i class="fas fa-phone-alt text-green-500"></i> +91 9448844241</p>
+                  <p><i class="fas fa-envelope text-green-500"></i> contact@hootandhowl.com</p>
+                </div>
+                <h3 class="mt-6 text-lg font-semibold text-gray-900">Social Links</h3>
+                <div class="flex space-x-4 mt-4">
+                  <a href="#"><i class="fab fa-instagram text-2xl text-gray-700 hover:text-gray-900"></i></a>
+                  <a href="#"><i class="fab fa-facebook text-2xl text-gray-700 hover:text-gray-900"></i></a>
+                  <a href="#"><i class="fab fa-twitter text-2xl text-gray-700 hover:text-gray-900"></i></a>
+                  <a href="#"><i class="fab fa-youtube text-2xl text-gray-700 hover:text-gray-900"></i></a>
+                </div>
+              </div>
+        
+              <!-- Newsletter Subscription -->
+              <div class="w-full md:w-1/3 mb-6">
+                <h3 class="text-lg font-semibold text-gray-900">Subscribe to our Newsletter</h3>
+                <form class="mt-4">
+                  <input type="email" placeholder="Email *" class="w-full px-4 py-2 border border-gray-300 rounded-lg mb-4">
+                  <label class="flex items-center text-gray-700">
+                    <input type="checkbox" class="mr-2"> Yes, subscribe me to your newsletter.
+                  </label>
+                  <button type="submit" class="mt-4 w-full bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">Submit</button>
+                </form>
+              </div>
+            </div>
+        
+            <!-- Head Office -->
+            <div class="mt-10">
+              <h3 class="text-lg font-semibold text-gray-900"><center>Head Office</center></h3>
+              <p class="mt-2 text-gray-700"><center>Hoot&Howl Learning,#1116 3rd Cross 7th Koramangala, Bengaluru 560047</center></p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.8191646890035!2d77.613889!3d12.971598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670a02a307f%3A0x17b44e1c8d80a2d0!2sKoramangala%2C%20Bengaluru%2C%20Karnataka%20560047!5e0!3m2!1sen!2sin!4v1691084831400!5m2!1sen!2sin" 
+                width="100%" 
+                height="200" 
+                class="mt-4 border-0 rounded-lg" 
+                allowfullscreen="" 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </footer>        
+        <footer class="bg-blue-100 text-[#000f49] py-6 text-center">
+          <p class="text-lg">&copy; 2025 Hoot&Howl Learning | All Rights Reserved</p>
+        </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  		<!-- Include all js compiled plugins (below), or include individual files as needed -->
+
+      <script src="assets/js/jquery.js"></script>
+        
+      <!--modernizr.min.js-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  
+  <!--bootstrap.min.js-->
+      <script src="assets/js/bootstrap.min.js"></script>
+  
+  <!-- bootsnav js -->
+  <script src="assets/js/bootsnav.js"></script>
+
+      <!--feather.min.js-->
+      <script  src="assets/js/feather.min.js"></script>
+
+      <!-- counter js -->
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+
+      <!--slick.min.js-->
+      <script src="assets/js/slick.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+       
+      <!--Custom JS-->
+      <script src="assets/js/custom.js"></script>
+</body>
+</html>
+
